@@ -1,8 +1,6 @@
 import css from './ContactItem.module.css';
 
-export const ContactItem = props => {
-  const { id, name, number, deleteContact } = props;
-
+export const ContactItem = ({ id, name, number, deleteContact }) => {
   return (
     <li className={css.item}>
       {name}: {number}
