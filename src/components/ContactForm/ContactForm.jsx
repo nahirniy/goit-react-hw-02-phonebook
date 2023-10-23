@@ -13,16 +13,15 @@ class ContactForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    e.target.reset();
 
-    return {
-      ...this.state,
-    };
+    this.props.addContact({ ...this.state });
+
+    e.target.reset();
   };
 
   render() {
     return (
-      <form className={css.form} onSubmit={e => this.props.addContact(this.handleSubmit(e))}>
+      <form className={css.form} onSubmit={this.handleSubmit}>
         <label htmlFor="name" className={css.label}>
           Name
           <input

@@ -52,7 +52,7 @@ class App extends Component {
         <ContactForm addContact={addContact} />
         <h2>Contacts</h2>
         <Filter findContact={findContact} />
-        <ContactList filteredConctact={filteredConctact} deleteContact={deleteContact} />
+        <ContactList filteredConctact={filteredConctact()} deleteContact={deleteContact} />
       </div>
     );
   }
